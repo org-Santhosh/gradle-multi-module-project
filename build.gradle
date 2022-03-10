@@ -11,17 +11,6 @@ subprojects {
     group = 'pl.jlabs'
     version = '1.0'
     sourceCompatibility = 1.13 //System.getProperty("java.version") or "13" or JavaVersion.VERSION_13
-    repositories {
-        jcenter()
-        mavenCentral()
-        maven {
-            credentials {
-                username = "${repoUser}"
-                password = "${repoPass}"
-            }
-            url "http://my.private.artifactory/url/goes/here"
-        }
-    }
     apply from: "${rootProject.projectDir}/commonDependencies.gradle"
 }
 subprojects { subproject ->
