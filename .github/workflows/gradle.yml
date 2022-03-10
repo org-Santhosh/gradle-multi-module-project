@@ -8,14 +8,11 @@ jobs:
     steps:
       - name: Step 1 - Checkout  repo from philips-internal
         uses: actions/checkout@v2
-        with:
-          repository: philips-internal/ampm-deviceobservations
-          token: ${{ secrets.ref_token }}
           
       - name: Step 2 - Gradle wrapper version validation
         uses: gradle/wrapper-validation-action@v1
       
-      - name: Step 3 - Use Java version 17
+      - name: Step 3 - Use Java version 13
         uses: actions/setup-java@v2
         with:
           java-version: 13
